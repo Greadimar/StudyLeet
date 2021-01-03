@@ -1,7 +1,6 @@
 #include <QCoreApplication>
 using namespace std;
 #include <stack>
-#include <unordered_set>
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -16,7 +15,6 @@ public:
         //need to implement
         std::vector<int> vec;
         std::stack<TreeNode*> stack;
-        std::
         stack.push(root);
         TreeNode* curNode;
         while(true){
@@ -30,11 +28,11 @@ public:
             else{
                 if (curNode->left != nullptr){
                     stack.push(curNode->left);
-                    curNode = curNode->left;
+                    curNode->left = nullptr;
                 }
                 else if (curNode->right != nullptr){
                     stack.push(curNode->right);
-                    curNode = curNode->right;
+                    curNode->right = nullptr;
                 }
             }
 
