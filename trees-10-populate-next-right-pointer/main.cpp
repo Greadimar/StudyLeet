@@ -47,7 +47,7 @@ public:
          if(root == NULL)
              return root;
 
-         queue<Node*> q;
+         std::queue<Node*> q;
          q.push(root);
          Node* prev = new Node();
 
