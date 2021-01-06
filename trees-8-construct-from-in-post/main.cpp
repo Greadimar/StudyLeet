@@ -83,8 +83,8 @@ class SolutionFast{
         TreeNode* root = new TreeNode(rootVal);
         int posRoot = map[rootVal];
         int left = posRoot-iStart;
-        root->left = buildTree(pStart,pStart+left,iStart,posRoot);
-        root->right = buildTree(pStart+left,pEnd-1,posRoot+1,iEnd);
+        root->left = buildTree(pStart, pStart+left, iStart,posRoot);
+        root->right = buildTree(pStart+left, pEnd-1,posRoot+1,iEnd);
         return root;
     }
 
